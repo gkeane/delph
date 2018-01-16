@@ -10,7 +10,8 @@
   <meta name="author" content="RapidxHTML" />
   <link href="https://cdn1.canr.udel.edu/wp-content/plugins/wc-shortcodes/public/assets/css/style.css?ver=3.42" rel="stylesheet" type="text/css" />
   <!--[if lte IE 7]><link href="http://ag.udel.edu/css/iehacks.css" rel="stylesheet" type="text/css" /><![endif]-->
-  <script type="text/javascript" src="http://ag.udel.edu//newfiles/js/jquery.js"></script>
+  <!-- <script type="text/javascript" src="http://ag.udel.edu//newfiles/js/jquery.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!--[if IE 6]>
   <script type="text/javascript" src="http://ag.udel.edu/js/ie6pngfix.js"></script>
   <script type="text/javascript">
@@ -288,11 +289,11 @@ text-decoration: none;
    <tr>
    <th></th>
    <th><?php 
-    $paginator = $this->Paginator;
-   echo $paginator->sort('Authors', 'authors'); ?>
-   <?php echo $paginator->sort('Year', 'year'); ?>
-   <?php echo $paginator->sort('Title', 'title'); ?>
-   <?php echo $paginator->sort('Journal', 'journal'); ?></th>
+   $paginator = $this->Paginator;
+   echo $paginator->sort('authors', 'Authors'); ?>
+   <?php echo $paginator->sort('year', 'Year'); ?>
+   <?php echo $paginator->sort('title', 'Title'); ?>
+   <?php echo $paginator->sort('journal', 'Journal'); ?></th>
    </tr>
    <!-- Here is where we loop through our $posts array, printing out post info -->
    <?php foreach ($delph as $d): ?>
